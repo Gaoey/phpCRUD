@@ -71,7 +71,6 @@
         }
  
         $conn->close();
- 
         return $customer;
     }
  
@@ -87,7 +86,8 @@
         $statement->bind_param("i", $id);
         if ($statement->execute() === true) {
             echo "Delete Success!!";
-            echo "<h4><a href='./showAll.php'>BACK</a></h4>";
+            // echo "<h4><a href='./showAll.php'>BACK</a></h4>";
+            
         } else {
             echo "Error: " . $sql . "<br>" . $conn->error;
         }
